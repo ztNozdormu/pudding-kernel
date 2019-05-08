@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>com.mohism.pudding</groupId>
+  <artifactId>pudding-kernel</artifactId>
+  <version>0.0.1</version>
+
+  <name>pudding-kernel</name>
+  <packaging>pom</packaging>
+  <description>pudding微服务核心</description>
+  <url>http://www.example.com</url>
+
+  <parent>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter-parent</artifactId>
+    <version>2.1.4.RELEASE</version>
+  </parent>
+
+  <dependencies>
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-test</artifactId>
+      <scope>test</scope>
+    </dependency>
+  </dependencies>
+
+  <dependencyManagement>
+    <dependencies>
+      <!--spring cloud-->
+<!--      <dependency>-->
+<!--        <groupId>org.springframework.cloud</groupId>-->
+<!--        <artifactId>spring-cloud-dependencies</artifactId>-->
+<!--        <version>${spring-cloud.version}</version>-->
+<!--        <type>pom</type>-->
+<!--        <scope>import</scope>-->
+<!--      </dependency>-->
+      <dependency>
+        <groupId>org.springframework.cloud</groupId>
+        <artifactId>spring-cloud-alibaba-dependencies</artifactId>
+        <version>0.2.1.RELEASE</version>
+        <type>pom</type>
+        <scope>import</scope>
+      </dependency>
+      <!--数据库-->
+      <dependency>
+        <groupId>com.alibaba</groupId>
+        <artifactId>druid</artifactId>
+        <version>${druid.version}</version>
+      </dependency>
+      <!--mybatis-plus 数据持久层框架-->
+      <dependency>
+        <groupId>com.baomidou</groupId>
+        <artifactId>mybatis-plus-boot-starter</artifactId>
+        <version>${mp.springboot.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.baomidou</groupId>
+        <artifactId>mybatis-plus</artifactId>
+        <version>${mp.springboot.version}</version>
+      </dependency>
+
+      <!--工具类-->
+      <dependency>
+        <groupId>cn.hutool</groupId>
+        <artifactId>hutool-core</artifactId>
+        <version>${hutool.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.alibaba</groupId>
+        <artifactId>fastjson</artifactId>
+        <version>${fastjson.version}</version>
+      </dependency>
+
+      <!--验证码-->
+      <dependency>
+        <groupId>com.github.penggle</groupId>
+        <artifactId>kaptcha</artifactId>
+        <version>${kaptcha.version}</version>
+      </dependency>
+
+      <!--jwt-->
+      <dependency>
+        <groupId>io.jsonwebtoken</groupId>
+        <artifactId>jjwt</artifactId>
+        <version>${jwt.version}</version>
+      </dependency>
+
+      <dependency>
+        <groupId>org.projectlombok</groupId>
+        <artifactId>lombok</artifactId>
+        <version>${lombok.versin}</version>
+      </dependency>
+    </dependencies>
+  </dependencyManagement>
+
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <version>3.7.0</version>
+        <configuration>
+          <source>1.8</source>
+          <target>1.8</target>
+        </configuration>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-source-plugin</artifactId>
+        <version>3.0.1</version>
+        <configuration>
+          <attach>true</attach>
+        </configuration>
+        <executions>
+          <execution>
+            <phase>compile</phase>
+            <goals>
+              <goal>jar</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-javadoc-plugin</artifactId>
+        <version>2.9.1</version>
+        <executions>
+          <execution>
+            <phase>package</phase>
+            <goals>
+              <goal>jar</goal>
+            </goals>
+          </execution>
+        </executions>
+        <configuration>
+          <additionalparam>-Xdoclint:none</additionalparam>
+        </configuration>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-gpg-plugin</artifactId>
+        <version>1.5</version>
+        <executions>
+          <execution>
+            <phase>verify</phase>
+            <goals>
+              <goal>sign</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
+    </plugins>
+    <resources>
+      <resource>
+        <directory>src/main/resources</directory>
+      </resource>
+      <resource>
+        <directory>src/main/java</directory>
+        <includes>
+          <include>**/*.xml</include>
+        </includes>
+      </resource>
+    </resources>
+  </build>
+
+  <developers>
+    <developer>
+      <name>real earth</name>
+      <email>2307631397@qq.com</email>
+    </developer>
+  </developers>
+
+<!--  <scm>-->
+<!--    <connection>scm:git@gitee.com:stylefeng-Roses/roses-kernel.git</connection>-->
+<!--    <developerConnection>scm:git@gitee.com:stylefeng-Roses/roses-kernel.git</developerConnection>-->
+<!--    <url>https://gitee.com/stylefeng-Roses/roses-kernel</url>-->
+<!--  </scm>-->
+
+<!--  <distributionManagement>-->
+<!--    <snapshotRepository>-->
+<!--      <id>center</id>-->
+<!--      <url>https://oss.sonatype.org/content/repositories/snapshots</url>-->
+<!--    </snapshotRepository>-->
+<!--    <repository>-->
+<!--      <id>center</id>-->
+<!--      <url>https://oss.sonatype.org/service/local/staging/deploy/maven2</url>-->
+<!--    </repository>-->
+<!--  </distributionManagement>-->
+</project>
