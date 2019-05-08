@@ -7,6 +7,9 @@
   <groupId>com.mohism.pudding</groupId>
   <artifactId>pudding-kernel</artifactId>
   <version>0.0.1</version>
+  <modules>
+    <module>kernel-model</module>
+  </modules>
 
   <name>pudding-kernel</name>
   <packaging>pom</packaging>
@@ -18,7 +21,20 @@
     <artifactId>spring-boot-starter-parent</artifactId>
     <version>2.1.4.RELEASE</version>
   </parent>
-
+  <!--版本号-->
+  <properties>
+    <java.version>1.8</java.version>
+    <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <spring-cloud-alibaba.version>0.2.1.RELEASE</spring-cloud-alibaba.version>
+    <mp.springboot.version>3.1.0</mp.springboot.version>
+    <fastjson.version>1.2.56</fastjson.version>
+    <druid.version>1.1.12</druid.version>
+    <kaptcha.version>2.3.2</kaptcha.version>
+    <jwt.version>0.9.1</jwt.version>
+    <hutool.version>4.4.0</hutool.version>
+    <lombok.versin>1.18.4</lombok.versin>
+  </properties>
   <dependencies>
     <dependency>
       <groupId>org.springframework.boot</groupId>
@@ -33,7 +49,7 @@
       <dependency>
         <groupId>org.springframework.cloud</groupId>
         <artifactId>spring-cloud-alibaba-dependencies</artifactId>
-        <version>0.2.1.RELEASE</version>
+        <version>${spring-cloud-alibaba.version}</version>
         <type>pom</type>
         <scope>import</scope>
       </dependency>
