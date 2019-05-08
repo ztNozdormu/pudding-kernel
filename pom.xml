@@ -11,7 +11,7 @@
   <name>pudding-kernel</name>
   <packaging>pom</packaging>
   <description>pudding微服务核心</description>
-  <url>http://www.example.com</url>
+  <url>https://github.com/ztNozdormu/pudding-kernel.git</url>
 
   <parent>
     <groupId>org.springframework.boot</groupId>

@@ -1,11 +1,14 @@
-# pudding-kernel 项目骨架，开发利器 
+# pudding-kernel 项目骨架，开发利器 项目总体命名为 mohism-pudding
+命名由来:
+mohism:墨家思想
+pudding:小猫布丁名字
 
 ---
    
 ## 介绍
 Pudding 布丁为鄙人一只喵喵的名字，故取名为pudding;该项目借鉴Roses的项目，非常喜欢Roses项目的结构设计，不过鄙人比较喜欢doubbo，所以希望在汲取Roses开源项目优秀设计的基础上，自己实现一套doubbo方案(微)服务化框架.
-微服务核心组件集采用阿里开源项目https://gitee.com/mirrors/Spring-Cloud-Alibaba
-本项目为Pudding系列微服务框架的模块之一，Pudding基于`Spring Boot 2`和`Spring-Cloud-Alibaba`，致力做更简洁的**分布式**和**服务化**解决方案，Pudding拥有高效率的开发体验，提供可靠消息最终一致性分布式事务解决方案，提供基于调用链的服务治理，提供可靠的服务异常定位方案（Log + Trace）等等，**一个分布式框架不仅需要构建高效稳定的底层开发框架，更需要解决分布式带来的种种挑战**，请关注Pudding微服务框架[https://gitee.com/stylefeng/Pudding](https://gitee.com/stylefeng/Pudding)
+微服务核心组件集采用阿里开源项目https://gitee.com/mirrors/Spring-Cloud-Alibaba;
+本项目为Pudding系列微服务框架的模块之一，Pudding基于`Spring Boot 2`和`Spring-Cloud-Alibaba`，致力做更简洁的**分布式**和**服务化**解决方案，Pudding拥有高效率的开发体验，提供可靠消息最终一致性分布式事务解决方案，提供基于调用链的服务治理，提供可靠的服务异常定位方案（Log + Trace）等等，**一个分布式框架不仅需要构建高效稳定的底层开发框架，更需要解决分布式带来的种种挑战**，请关注Pudding微服务框架[https://github.com/ztNozdormu/pudding-kernel](https://gitee.com/stylefeng/Pudding)
 
 ---
 
