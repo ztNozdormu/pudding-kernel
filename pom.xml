@@ -13,8 +13,9 @@
   <url>https://github.com/ztNozdormu/pudding-kernel.git</url>
 
   <modules>
-    <module>kernel-model</module>
-    <module>kernel-generator</module>
+      <module>kernel-model</module>
+      <module>kernel-generator</module>
+      <module>kernel-core</module>
   </modules>
 
   <parent>
@@ -24,6 +25,7 @@
   </parent>
   <!--版本号-->
   <properties>
+    <project.version>0.0.1</project.version>
     <java.version>1.8</java.version>
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
