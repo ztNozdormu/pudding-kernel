@@ -7,14 +7,15 @@
   <groupId>com.mohism.pudding</groupId>
   <artifactId>pudding-kernel</artifactId>
   <version>0.0.1</version>
-  <modules>
-    <module>kernel-model</module>
-  </modules>
-
   <name>pudding-kernel</name>
   <packaging>pom</packaging>
   <description>pudding微服务核心</description>
   <url>https://github.com/ztNozdormu/pudding-kernel.git</url>
+
+  <modules>
+    <module>kernel-model</module>
+    <module>kernel-generator</module>
+  </modules>
 
   <parent>
     <groupId>org.springframework.boot</groupId>
