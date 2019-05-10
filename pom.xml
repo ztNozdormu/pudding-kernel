@@ -13,10 +13,12 @@
   <url>https://github.com/ztNozdormu/pudding-kernel.git</url>
 
   <modules>
-      <module>kernel-model</module>
-      <module>kernel-generator</module>
-      <module>kernel-core</module>
-      <module>kernel-jwt</module>
+    <module>kernel-model</module>
+    <module>kernel-generator</module>
+    <module>kernel-core</module>
+    <module>kernel-jwt</module>
+    <module>kernel-logger</module>
+    <module>kernel-validator</module>
   </modules>
 
   <parent>
