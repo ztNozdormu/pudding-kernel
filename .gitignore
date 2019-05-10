@@ -10,3 +10,4 @@ kernel-core.iml
 kernel-jwt.iml
 kernel-validator.iml
 kernel-logger.iml
+kernel-sign.iml

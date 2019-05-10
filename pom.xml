@@ -19,6 +19,7 @@
     <module>kernel-jwt</module>
     <module>kernel-logger</module>
     <module>kernel-validator</module>
+      <module>kernel-sign</module>
   </modules>
 
   <parent>
