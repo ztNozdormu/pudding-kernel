@@ -3,3 +3,4 @@ pudding-kernel.iml
 kernel-model.iml
 kernel-generator.iml
 kernel-core.iml
+kernel-jwt.iml

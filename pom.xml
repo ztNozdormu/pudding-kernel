@@ -16,6 +16,7 @@
       <module>kernel-model</module>
       <module>kernel-generator</module>
       <module>kernel-core</module>
+      <module>kernel-jwt</module>
   </modules>
 
   <parent>
