@@ -1,5 +1,8 @@
-.idea
 /target/
+.idea
+.classpath
+.project
+.settings
 pudding-kernel.iml
 kernel-model.iml
 kernel-generator.iml
