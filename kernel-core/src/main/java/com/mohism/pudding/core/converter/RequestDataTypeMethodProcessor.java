@@ -15,7 +15,8 @@
  */
 package com.mohism.pudding.core.converter;
 
-import cn.stylefeng.roses.core.reqres.request.RequestData;
+import com.mohism.pudding.core.reqres.request.RequestData;
+import com.mohism.pudding.core.reqres.request.RequestData;
 import org.springframework.core.MethodParameter;
 import org.springframework.http.converter.HttpMessageConverter;
 import org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor;

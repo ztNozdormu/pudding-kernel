@@ -1,0 +1,34 @@
+{
+  "groups": [
+    {
+      "name": "roses.log",
+      "type": "com.mohism.pudding.kernel.logger.config.properties.LogProperties",
+      "sourceType": "com.mohism.pudding.kernel.logger.config.LoggerAutoConfiguration",
+      "sourceMethod": "logProperties()"
+    }
+  ],
+  "properties": [
+    {
+      "name": "roses.log.kafka",
+      "type": "java.lang.Boolean",
+      "description": "日志记录的总开关（通过kafka）",
+      "sourceType": "com.mohism.pudding.kernel.logger.config.properties.LogProperties",
+      "defaultValue": false
+    },
+    {
+      "name": "roses.log.level",
+      "type": "java.lang.String",
+      "description": "记录日志的级别（逗号隔开）",
+      "sourceType": "com.mohism.pudding.kernel.logger.config.properties.LogProperties",
+      "defaultValue": "error,info"
+    },
+    {
+      "name": "roses.log.trace",
+      "type": "java.lang.Boolean",
+      "description": "是否开启trace链式记录",
+      "sourceType": "com.mohism.pudding.kernel.logger.config.properties.LogProperties",
+      "defaultValue": true
+    }
+  ],
+  "hints": []
+}

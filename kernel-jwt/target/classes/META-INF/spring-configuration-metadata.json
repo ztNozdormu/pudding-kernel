@@ -1,0 +1,27 @@
+{
+  "groups": [
+    {
+      "name": "jwt",
+      "type": "com.mohism.pudding.kernel.jwt.properties.JwtProperties",
+      "sourceType": "com.mohism.pudding.kernel.jwt.config.JwtAutoConfiguration",
+      "sourceMethod": "jwtProperties()"
+    }
+  ],
+  "properties": [
+    {
+      "name": "jwt.expiration",
+      "type": "java.lang.Long",
+      "description": "jwt过期时间(单位:秒)(默认:1天)",
+      "sourceType": "com.mohism.pudding.kernel.jwt.properties.JwtProperties",
+      "defaultValue": 82800
+    },
+    {
+      "name": "jwt.secret",
+      "type": "java.lang.String",
+      "description": "jwt的秘钥",
+      "sourceType": "com.mohism.pudding.kernel.jwt.properties.JwtProperties",
+      "defaultValue": "u47REBDLrxfd79w"
+    }
+  ],
+  "hints": []
+}

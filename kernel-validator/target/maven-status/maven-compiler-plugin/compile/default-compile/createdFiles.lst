@@ -1,0 +1,4 @@
+com\mohism\pudding\kernel\validator\stereotype\ParamValidator.class
+com\mohism\pudding\kernel\validator\config\ValidatorAutoConfiguration.class
+com\mohism\pudding\kernel\validator\util\CheckUtil.class
+com\mohism\pudding\kernel\validator\aop\ParamValidateAop.class

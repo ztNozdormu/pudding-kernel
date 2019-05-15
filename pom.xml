@@ -19,7 +19,7 @@
     <module>kernel-jwt</module>
     <module>kernel-logger</module>
     <module>kernel-validator</module>
-      <module>kernel-sign</module>
+    <module>kernel-sign</module>
   </modules>
 
   <parent>
@@ -30,6 +30,7 @@
   <!--版本号-->
   <properties>
     <project.version>0.0.1</project.version>
+<!--    <project.version>0.0.1-SNAPSHOT</project.version>-->
     <java.version>1.8</java.version>
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -113,62 +114,64 @@
   </dependencyManagement>
 
   <build>
-    <plugins>
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-compiler-plugin</artifactId>
-        <version>3.7.0</version>
-        <configuration>
-          <source>1.8</source>
-          <target>1.8</target>
-        </configuration>
-      </plugin>
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-source-plugin</artifactId>
-        <version>3.0.1</version>
-        <configuration>
-          <attach>true</attach>
-        </configuration>
-        <executions>
-          <execution>
-            <phase>compile</phase>
-            <goals>
-              <goal>jar</goal>
-            </goals>
-          </execution>
-        </executions>
-      </plugin>
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-javadoc-plugin</artifactId>
-        <version>2.9.1</version>
-        <executions>
-          <execution>
-            <phase>package</phase>
-            <goals>
-              <goal>jar</goal>
-            </goals>
-          </execution>
-        </executions>
-        <configuration>
-          <additionalparam>-Xdoclint:none</additionalparam>
-        </configuration>
-      </plugin>
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-gpg-plugin</artifactId>
-        <version>1.5</version>
-        <executions>
-          <execution>
-            <phase>verify</phase>
-            <goals>
-              <goal>sign</goal>
-            </goals>
-          </execution>
-        </executions>
-      </plugin>
-    </plugins>
+    <pluginManagement>
+      <plugins>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-compiler-plugin</artifactId>
+          <version>3.7.0</version>
+          <configuration>
+            <source>1.8</source>
+            <target>1.8</target>
+          </configuration>
+        </plugin>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-source-plugin</artifactId>
+          <version>3.0.1</version>
+          <configuration>
+            <attach>true</attach>
+          </configuration>
+          <executions>
+            <execution>
+              <phase>compile</phase>
+              <goals>
+                <goal>jar</goal>
+              </goals>
+            </execution>
+          </executions>
+        </plugin>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-javadoc-plugin</artifactId>
+          <version>2.9.1</version>
+          <executions>
+            <execution>
+              <phase>package</phase>
+              <goals>
+                <goal>jar</goal>
+              </goals>
+            </execution>
+          </executions>
+          <configuration>
+            <additionalparam>-Xdoclint:none</additionalparam>
+          </configuration>
+        </plugin>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-gpg-plugin</artifactId>
+          <version>1.5</version>
+          <executions>
+            <execution>
+              <phase>verify</phase>
+              <goals>
+                <goal>sign</goal>
+              </goals>
+            </execution>
+          </executions>
+        </plugin>
+      </plugins>
+    </pluginManagement>
     <resources>
       <resource>
         <directory>src/main/resources</directory>
@@ -194,7 +197,7 @@
 <!--    <developerConnection>scm:git@gitee.com:stylefeng-Roses/roses-kernel.git</developerConnection>-->
 <!--    <url>https://gitee.com/stylefeng-Roses/roses-kernel</url>-->
 <!--  </scm>-->
-
+  <!-- 定义snapshots库和releases库的外网正式地址nexus地址-->
 <!--  <distributionManagement>-->
 <!--    <snapshotRepository>-->
 <!--      <id>center</id>-->
@@ -205,4 +208,27 @@
 <!--      <url>https://oss.sonatype.org/service/local/staging/deploy/maven2</url>-->
 <!--    </repository>-->
 <!--  </distributionManagement>-->
+  <profiles>
+    <profile>
+      <id>release</id>
+      <properties>
+        <project.version>0.0.1</project.version>
+      </properties>
+    </profile>
+  </profiles>
+  <!--定义snapshots库和releases库的nexus地址-->
+      <distributionManagement>
+        <repository>
+          <id>nexus-releases</id>
+          <url>
+            http://47.107.170.59:8081/repository/maven-releases/
+          </url>
+        </repository>
+        <snapshotRepository>
+          <id>nexus-snapshots</id>
+          <url>
+            http://47.107.170.59:8081/repository/maven-snapshots/
+          </url>
+        </snapshotRepository>
+      </distributionManagement>
 </project>

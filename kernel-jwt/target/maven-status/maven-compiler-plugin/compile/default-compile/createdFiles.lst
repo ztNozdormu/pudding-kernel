@@ -1,0 +1,4 @@
+com\mohism\pudding\kernel\jwt\properties\JwtProperties.class
+com\mohism\pudding\kernel\jwt\utils\JwtTokenUtil.class
+META-INF\spring-configuration-metadata.json
+com\mohism\pudding\kernel\jwt\config\JwtAutoConfiguration.class

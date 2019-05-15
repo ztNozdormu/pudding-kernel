@@ -1,0 +1,5 @@
+com\mohism\pudding\kernel\sign\util\SignFactory.class
+com\mohism\pudding\kernel\sign\config\SignConfig.class
+com\mohism\pudding\kernel\sign\service\impl\SimpleSignService.class
+com\mohism\pudding\kernel\sign\service\SignService.class
+com\mohism\pudding\kernel\sign\config\properties\SignProperties.class
