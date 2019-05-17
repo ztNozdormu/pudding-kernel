@@ -20,6 +20,8 @@
     <module>kernel-logger</module>
     <module>kernel-validator</module>
     <module>kernel-sign</module>
+    <module>kernel-scanner</module>
+      <module>kernel-actuator</module>
   </modules>
 
   <parent>
