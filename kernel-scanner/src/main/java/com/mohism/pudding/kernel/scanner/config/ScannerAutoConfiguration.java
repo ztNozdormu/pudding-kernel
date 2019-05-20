@@ -75,7 +75,7 @@ public class ScannerAutoConfiguration {
     }
 
     /**
-     * 资源扫描之后的资源汇报操作（向roses-auth服务）
+     * 资源扫描之后的资源汇报操作（向pudding-auth服务）
      */
     @Bean
     @ConditionalOnProperty(prefix = SCANNER_PREFIX, name = "open", havingValue = "true")

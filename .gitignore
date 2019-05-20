@@ -1,13 +1,43 @@
-/target/
-.idea
+*.class
+
+# Package Files #
+*.jar
+*.war
+*.ear
+*.iml
+target/
+
+# eclipse
+.settings/
 .classpath
 .project
-.settings
-pudding-kernel.iml
-kernel-model.iml
-kernel-generator.iml
-kernel-core.iml
-kernel-jwt.iml
-kernel-validator.iml
-kernel-logger.iml
-kernel-sign.iml
+logs/
+
+# idea
+.idea/
+*.iml
+
+*velocity.log*
+
+### STS ###
+.apt_generated
+.factorypath
+.springBeans
+
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.ipr
+
+### NetBeans ###
+nbproject/private/
+build/
+nbbuild/
+dist/
+nbdist/
+.nb-gradle/
+
+*.log
+tmp/
+
+.DS_Store

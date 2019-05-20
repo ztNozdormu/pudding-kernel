@@ -15,9 +15,10 @@
  */
 package com.mohism.pudding.kernel.validator.util;
 
-import cn.stylefeng.roses.kernel.model.exception.RequestEmptyException;
-import cn.stylefeng.roses.kernel.model.util.ValidateUtil;
-import cn.stylefeng.roses.kernel.model.validator.BaseValidatingParam;
+
+import com.mohism.pudding.kernel.model.exception.RequestEmptyException;
+import com.mohism.pudding.kernel.model.util.ValidateUtil;
+import com.mohism.pudding.kernel.model.validator.BaseValidatingParam;
 
 /**
  * 校验参数中的参数是否符合规则

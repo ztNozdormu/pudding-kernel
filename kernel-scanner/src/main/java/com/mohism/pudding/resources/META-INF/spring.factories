@@ -1,2 +1,0 @@
-org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
-com.mohism.pudding.kernel.scanner.config.ScannerAutoConfiguration

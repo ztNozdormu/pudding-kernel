@@ -15,7 +15,7 @@
  */
 package com.mohism.pudding.kernel.validator.aop;
 
-import cn.stylefeng.roses.kernel.model.constants.AopSortConstants;
+import com.mohism.pudding.kernel.model.constants.AopSortConstants;
 import com.mohism.pudding.kernel.validator.util.CheckUtil;
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.Around;
@@ -33,7 +33,7 @@ import org.springframework.core.annotation.Order;
 @Order(AopSortConstants.PARAM_VALIDATE_AOP_SORT)
 public class ParamValidateAop {
 
-    @Pointcut(value = "@annotation(cn.stylefeng.roses.kernel.validator.stereotype.ParamValidator)")
+    @Pointcut(value = "@annotation(com.mohism.pudding.kernel.validator.stereotype.ParamValidator)")
     private void cutService() {
 
     }
