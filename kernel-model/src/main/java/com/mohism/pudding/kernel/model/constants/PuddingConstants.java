@@ -21,7 +21,7 @@ package com.mohism.pudding.kernel.model.constants;
  * @author fengshuonan
  * @date 2018-05-11 23:46
  */
-public interface RosesConstants {
+public interface PuddingConstants {
 
     /**
      * 请求号header标识

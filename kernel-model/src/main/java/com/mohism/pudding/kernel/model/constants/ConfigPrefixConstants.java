@@ -26,12 +26,12 @@ public interface ConfigPrefixConstants {
     /**
      * 日志记录配置的前缀，属性见LogProperties
      */
-    String LOG_PREFIX = "roses.log";
+    String LOG_PREFIX = "pudding.log";
 
     /**
      * 资源扫描器的前缀
      */
-    String SCANNER_PREFIX = "roses.scanner";
+    String SCANNER_PREFIX = "pudding.scanner";
 
     /**
      * 阿里云的oss文件存储
