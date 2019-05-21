@@ -1,4 +1,8 @@
 -------------------------------------------------------------------------------
 Test set: com.mohism.pudding.AppTest
 -------------------------------------------------------------------------------
+<<<<<<< HEAD
 Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.165 s - in com.mohism.pudding.AppTest
+=======
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.047 s - in com.mohism.pudding.AppTest
+>>>>>>> 6e03d054f2d17df5236dd5f2b917fcc7f11236de

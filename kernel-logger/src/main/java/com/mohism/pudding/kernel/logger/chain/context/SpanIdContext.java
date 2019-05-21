@@ -19,7 +19,7 @@ package com.mohism.pudding.kernel.logger.chain.context;
 import com.mohism.pudding.core.util.HttpContext;
 import com.mohism.pudding.core.util.ToolUtil;
 import com.mohism.pudding.kernel.model.api.base.AbstractBaseRequest;
-import com.mohism.pudding.kernel.model.constants.RosesConstants;
+import com.mohism.pudding.kernel.model.constants.PuddingConstants;
 import lombok.extern.slf4j.Slf4j;
 
 import javax.servlet.http.HttpServletRequest;
@@ -45,7 +45,7 @@ public class SpanIdContext {
             }
             return "";
         } else {
-            String requestNo = request.getHeader(RosesConstants.SPAN_ID_HEADER_NAME);
+            String requestNo = request.getHeader(PuddingConstants.SPAN_ID_HEADER_NAME);
             if (ToolUtil.isEmpty(requestNo)) {
                 return "";
             } else {

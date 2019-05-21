@@ -16,9 +16,9 @@ com\mohism\pudding\kernel\model\resource\ResourceDefinition.class
 com\mohism\pudding\kernel\model\auth\context\AbstractLoginContext.class
 com\mohism\pudding\kernel\model\exception\enums\CoreExceptionEnum.class
 com\mohism\pudding\kernel\model\api\AuthService.class
-com\mohism\pudding\kernel\model\constants\RosesConstants.class
 com\mohism\pudding\kernel\model\auth\context\LoginUserHolder.class
 com\mohism\pudding\kernel\model\node\TreeNode.class
+com\mohism\pudding\kernel\model\constants\PuddingConstants.class
 com\mohism\pudding\kernel\model\constants\AopSortConstants.class
 com\mohism\pudding\kernel\model\api\ResourceService.class
 com\mohism\pudding\kernel\model\api\base\AbstractBaseRequest.class
