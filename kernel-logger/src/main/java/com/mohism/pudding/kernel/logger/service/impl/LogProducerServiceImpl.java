@@ -25,6 +25,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.kafka.core.KafkaTemplate;
+import org.springframework.stereotype.Service;
 
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
@@ -36,6 +37,7 @@ import java.util.concurrent.Executors;
  * @author fengshuonan
  * @date 2018-04-25 10:37
  */
+@Service
 public class LogProducerServiceImpl implements LogProducerService {
 
     private Logger logger = LoggerFactory.getLogger(this.getClass());

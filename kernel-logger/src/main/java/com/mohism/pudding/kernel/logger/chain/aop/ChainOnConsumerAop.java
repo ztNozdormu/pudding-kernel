@@ -104,9 +104,7 @@ public class ChainOnConsumerAop {
             return result;
 
         } catch (Throwable exception) {
-
             String exceptionMsg = ToolUtil.getExceptionMsg(exception);
-
             //报告:调用远程服务失败
             TraceUtil.trace(methodSignature, RpcPhaseEnum.EP2, traceId, currentSpanId, parentSpanId, exceptionMsg);
 

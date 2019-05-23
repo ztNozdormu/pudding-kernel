@@ -70,6 +70,9 @@ public class TraceUtil {
             sendingTraceLog.setContent(errorMessage);
 
             try {
+                if(getLogProducer()==null){{
+                    System.out.println("0002");
+                }}
                 getLogProducer().sendTraceMsg(sendingTraceLog);
             } catch (Exception e) {
                 logger.error("发送trace消息错误！", e);
@@ -88,9 +91,13 @@ public class TraceUtil {
             sendingTCLog.setUseTime(useTime);
 
             try {
+                if(getLogProducer()==null){{
+                    System.out.println("0001");
+                }}
                 getLogProducer().sendTcMsg(sendingTCLog);
             } catch (Exception e) {
-                logger.error("发送trace tc消息错误！", e);
+                System.out.println(e.getMessage());
+                logger.error("发送trace消息错误！", e);
             }
         }
 

@@ -22,7 +22,6 @@
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
         </dependency>
-
         <!--注意provided-->
         <dependency>
             <groupId>org.springframework</groupId>

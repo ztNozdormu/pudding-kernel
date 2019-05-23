@@ -40,6 +40,7 @@ H:\devHyc\workspace\pudding-kernel\kernel-core\src\main\java\com\mohism\pudding\
 H:\devHyc\workspace\pudding-kernel\kernel-core\src\main\java\com\mohism\pudding\core\config\MybatisPluginAutoConfiguration.java
 H:\devHyc\workspace\pudding-kernel\kernel-core\src\main\java\com\mohism\pudding\core\db\DbInitializer.java
 H:\devHyc\workspace\pudding-kernel\kernel-core\src\main\java\com\mohism\pudding\core\datascope\DataScope.java
+H:\devHyc\workspace\pudding-kernel\kernel-core\src\main\java\com\mohism\pudding\core\feign\PuddingFeignHeaderProcessInterceptor.java
 H:\devHyc\workspace\pudding-kernel\kernel-core\src\main\java\com\mohism\pudding\core\util\SqlUtil.java
 H:\devHyc\workspace\pudding-kernel\kernel-core\src\main\java\com\mohism\pudding\core\dbid\DBID.java
 H:\devHyc\workspace\pudding-kernel\kernel-core\src\main\java\com\mohism\pudding\core\treebuild\DefaultTreeBuildFactory.java
@@ -50,5 +51,6 @@ H:\devHyc\workspace\pudding-kernel\kernel-core\src\main\java\com\mohism\pudding\
 H:\devHyc\workspace\pudding-kernel\kernel-core\src\main\java\com\mohism\pudding\core\config\WebAutoConfiguration.java
 H:\devHyc\workspace\pudding-kernel\kernel-core\src\main\java\com\mohism\pudding\core\xss\WafRequestWrapper.java
 H:\devHyc\workspace\pudding-kernel\kernel-core\src\main\java\com\mohism\pudding\core\converter\RequestDataTypeMethodProcessor.java
+H:\devHyc\workspace\pudding-kernel\kernel-core\src\main\java\com\mohism\pudding\core\feign\PuddingFeignErrorDecoder.java
 H:\devHyc\workspace\pudding-kernel\kernel-core\src\main\java\com\mohism\pudding\core\xss\XssHttpServletRequestWrapper.java
 H:\devHyc\workspace\pudding-kernel\kernel-core\src\main\java\com\mohism\pudding\core\exception\DefaultExceptionHandler.java

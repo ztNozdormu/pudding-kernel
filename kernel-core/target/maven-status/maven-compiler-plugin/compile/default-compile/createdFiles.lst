@@ -32,6 +32,7 @@ com\mohism\pudding\core\util\FileUtil.class
 com\mohism\pudding\core\util\MvcAdapter.class
 com\mohism\pudding\core\util\HttpContext.class
 com\mohism\pudding\core\config\DbInitializerAutoConfiguration.class
+com\mohism\pudding\core\feign\PuddingFeignErrorDecoder.class
 com\mohism\pudding\core\xss\XssHttpServletRequestWrapper.class
 com\mohism\pudding\core\mutidatasource\annotion\DataSource.class
 com\mohism\pudding\core\util\NumUtil.class
@@ -49,6 +50,8 @@ com\mohism\pudding\core\reqres\response\ResponseData.class
 com\mohism\pudding\core\context\RequestDataHolder.class
 com\mohism\pudding\core\config\PropertiesAutoConfiguration.class
 com\mohism\pudding\core\config\FastjsonAutoConfiguration.class
+com\mohism\pudding\core\feign\PuddingFeignErrorDecoder$1.class
+com\mohism\pudding\core\feign\PuddingFeignHeaderProcessInterceptor.class
 com\mohism\pudding\core\config\WebAutoConfiguration.class
 com\mohism\pudding\core\util\SqlUtil.class
 com\mohism\pudding\core\db\DbInitializer.class

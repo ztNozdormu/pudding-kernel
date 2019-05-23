@@ -1,6 +1,6 @@
 H:\devHyc\workspace\pudding-kernel\kernel-model\src\main\java\com\mohism\pudding\kernel\model\api\AuthService.java
+H:\devHyc\workspace\pudding-kernel\kernel-model\src\main\java\com\mohism\pudding\kernel\model\constants\PuddingConstants.java
 H:\devHyc\workspace\pudding-kernel\kernel-model\src\main\java\com\mohism\pudding\kernel\model\exception\ServiceException.java
-H:\devHyc\workspace\pudding-kernel\kernel-model\src\main\java\com\mohism\pudding\kernel\model\constants\RosesConstants.java
 H:\devHyc\workspace\pudding-kernel\kernel-model\src\main\java\com\mohism\pudding\kernel\model\auth\context\AbstractLoginContext.java
 H:\devHyc\workspace\pudding-kernel\kernel-model\src\main\java\com\mohism\pudding\kernel\model\constants\AopSortConstants.java
 H:\devHyc\workspace\pudding-kernel\kernel-model\src\main\java\com\mohism\pudding\kernel\model\exception\enums\CoreExceptionEnum.java

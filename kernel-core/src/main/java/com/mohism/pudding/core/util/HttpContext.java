@@ -34,7 +34,6 @@ public class HttpContext {
 
     /**
      * 获取请求的ip地址
-     *
      * @author fengshuonan
      * @Date 2018/7/23 下午3:44
      */
