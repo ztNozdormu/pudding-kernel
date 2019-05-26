@@ -37,7 +37,7 @@ import java.util.concurrent.Executors;
  * @author fengshuonan
  * @date 2018-04-25 10:37
  */
-@Service
+@Service("logProducerService")
 public class LogProducerServiceImpl implements LogProducerService {
 
     private Logger logger = LoggerFactory.getLogger(this.getClass());

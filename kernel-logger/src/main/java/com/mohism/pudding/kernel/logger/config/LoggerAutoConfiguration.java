@@ -16,6 +16,7 @@
 package com.mohism.pudding.kernel.logger.config;
 
 
+import ch.qos.logback.core.net.SyslogOutputStream;
 import com.mohism.pudding.kernel.logger.config.properties.LogProperties;
 import com.mohism.pudding.kernel.logger.service.LogProducerService;
 import com.mohism.pudding.kernel.logger.service.impl.LogProducerServiceImpl;
@@ -45,6 +46,7 @@ public class LoggerAutoConfiguration {
     @Bean
     @ConditionalOnProperty(prefix = LOG_PREFIX, value = "kafka", havingValue = "true")
     public LogProducerService logProducerService() {
+        System.out.println("88888888");
         return new LogProducerServiceImpl();
     }
 }

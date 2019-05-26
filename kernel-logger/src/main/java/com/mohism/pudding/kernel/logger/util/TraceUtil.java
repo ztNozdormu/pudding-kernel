@@ -27,6 +27,7 @@ import com.mohism.pudding.kernel.logger.service.LogProducerService;
 import org.aspectj.lang.reflect.MethodSignature;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.Date;
 
@@ -70,12 +71,10 @@ public class TraceUtil {
             sendingTraceLog.setContent(errorMessage);
 
             try {
-                if(getLogProducer()==null){{
-                    System.out.println("0002");
-                }}
+                    System.out.println(getLogProducer());
                 getLogProducer().sendTraceMsg(sendingTraceLog);
             } catch (Exception e) {
-                logger.error("发送trace消息错误！", e);
+                logger.error("发送trace消息错误001！", e);
             }
         }
 
@@ -91,13 +90,11 @@ public class TraceUtil {
             sendingTCLog.setUseTime(useTime);
 
             try {
-                if(getLogProducer()==null){{
-                    System.out.println("0001");
-                }}
+                    System.out.println(getLogProducer());
                 getLogProducer().sendTcMsg(sendingTCLog);
             } catch (Exception e) {
                 System.out.println(e.getMessage());
-                logger.error("发送trace消息错误！", e);
+                logger.error("发送trace消息错误002！", e);
             }
         }
 
