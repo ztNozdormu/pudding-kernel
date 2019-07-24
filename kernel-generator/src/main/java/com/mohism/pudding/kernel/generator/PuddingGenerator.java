@@ -21,6 +21,8 @@ import com.baomidou.mybatisplus.generator.AutoGenerator;
 import com.baomidou.mybatisplus.generator.config.*;
 import com.baomidou.mybatisplus.generator.config.po.TableFill;
 import com.baomidou.mybatisplus.generator.config.rules.NamingStrategy;
+import com.mohism.pudding.kernel.generator.config.GenerateParams;
+import com.mohism.pudding.kernel.generator.engine.BeetlTemplateEngine;
 
 import java.util.ArrayList;
 
@@ -30,7 +32,7 @@ import java.util.ArrayList;
  * @author fengshuonan
  * @Date 2018/7/20 下午1:17
  */
-public class SimpleGenerator {
+public class PuddingGenerator {
 
     public static void doGeneration(GenerateParams generateParams) {
 
@@ -93,20 +95,31 @@ public class SimpleGenerator {
         // 自定义模板配置，可以 copy 源码 mybatis-plus/src/main/resources/templates 下面内容修改，
         // 放置自己项目的 src/main/resources/templates 目录下, 默认名称一下可以不配置，也可以自定义模板名称
         TemplateConfig tc = new TemplateConfig();
-        tc.setController(null);
-
-        if (!generateParams.getGeneratorInterface()) {
-            tc.setService(null);
-            tc.setServiceImpl("/templates/NoneInterfaceServiceImpl.java");
-        }
-
-        //如上任何一个模块如果设置 空 OR Null 将不生成该模块。
+//        tc.setController(null);
+//        if (!generateParams.getGeneratorInterface()) {
+//            tc.setService(null);
+//            tc.setServiceImpl("/templates/NoneInterfaceServiceImpl.java");
+//        }
+        // 自定义模板配置，模板可以参考源码 /mybatis-plus/src/main/resources/template 使用 copy
+        // 至您项目 src/main/resources/template 目录下，模板名称也可自定义如下配置：
+        tc.setController("/templates/controller.java");
+        // 关闭默认 xml 生成，调整生成 至 根目录
+        tc.setXml("/templates/mapper.xml");
+        tc.setEntity("/templates/entity.java");
+        tc.setMapper("/templates/mapper.java");
+        tc.setService("/templates/service.java");
+        tc.setServiceImpl("/templates/serviceImpl.java");
+        // 如上任何一个模块如果设置 空 OR Null 将不生成该模块。
         mpg.setTemplate(tc);
-
+        // 设置自定义的模板引擎
+        mpg.setTemplateEngine(new BeetlTemplateEngine());
         // 包配置
         PackageConfig pc = new PackageConfig();
+        // 包基本路径
         pc.setParent(generateParams.getParentPackage());
+        // 功能模块名称
         pc.setModuleName("");
+        // xml配置文件保存地址
         pc.setXml("mapper.mapping");
 
         if (generateParams.getGeneratorInterface()) {
@@ -124,7 +137,7 @@ public class SimpleGenerator {
     }
 
     public static void main(String[] args) {
-        SimpleGenerator.doGeneration(new GenerateParams());
+        PuddingGenerator.doGeneration(new GenerateParams());
     }
 
 }
