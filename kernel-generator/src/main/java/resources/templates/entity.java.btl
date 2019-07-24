@@ -21,11 +21,11 @@ import lombok.experimental.Accessors;
  */
 <% if(entityLombokModel){ %>
 @Data
-    <% if(isNotEmpty(superEntityClass)){ %>
+<% if(isNotEmpty(superEntityClass)){ %>
 @EqualsAndHashCode(callSuper = true)
-    <% }else{ %>
+<% }else{ %>
 @EqualsAndHashCode(callSuper = false)
-    <% } %>
+<% } %>
 @Accessors(chain = true)
 <% } %>
 <% if(table.convert){ %>

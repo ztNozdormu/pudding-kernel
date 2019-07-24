@@ -18,13 +18,13 @@ package com.mohism.pudding.kernel.generator.config;
 import lombok.Data;
 
 /**
- * 代码生成所需要传递的参数---修改为配置文件方式
+ * 代码生成器配置类
  *
  * @author nozdormu
- * @date 2019-05-08-晚上22:53
+ * @date 2019-07-24-早上10:22
  */
 @Data
-public class GenerateParams {
+public class GenerateConfig {
 
     //生成代码里，注释的作者
     private String author = "real earth";
@@ -36,7 +36,7 @@ public class GenerateParams {
     private String jdbcDriver = "com.mysql.cj.jdbc.Driver";//com.mysql.jdbc.Driver
 
     //数据库连接地址
-    private String jdbcUrl = "jdbc:mysql://127.0.0.1:3306/hyc_renren?autoReconnect=true&useUnicode=true&characterEncoding=utf8&zeroDateTimeBehavior=convertToNull&useSSL=false&serverTimezone=UTC";
+    private String jdbcUrl = "jdbc:mysql://127.0.0.1:3306/pudding_system?autoReconnect=true&useUnicode=true&characterEncoding=utf8&zeroDateTimeBehavior=convertToNull&useSSL=false&serverTimezone=UTC";
 
     //数据库账号
     private String jdbcUserName = "root";
@@ -48,7 +48,7 @@ public class GenerateParams {
     private String[] removeTablePrefix = {"sys_"};
 
     //代码生成包含的表，可为空，为空默认生成所有
-    private String[] includeTables={"sys_user","sys_dept","sys_role","sys_menu"};
+    private String[] includeTables={"sys_user","sys_depart","sys_role","sys_permission"};
 
     //代码生成的类的父包名称
     private String parentPackage = "com.mohism.pudding.xxx.modular";

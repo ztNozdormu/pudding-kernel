@@ -21,20 +21,20 @@ import com.baomidou.mybatisplus.generator.AutoGenerator;
 import com.baomidou.mybatisplus.generator.config.*;
 import com.baomidou.mybatisplus.generator.config.po.TableFill;
 import com.baomidou.mybatisplus.generator.config.rules.NamingStrategy;
-import com.mohism.pudding.kernel.generator.config.GenerateParams;
+import com.mohism.pudding.kernel.generator.config.GenerateConfig;
 import com.mohism.pudding.kernel.generator.engine.BeetlTemplateEngine;
 
 import java.util.ArrayList;
 
 /**
- * 简单代码生成器，service不生成接口
+ * 代码生成执行器
  *
- * @author fengshuonan
- * @Date 2018/7/20 下午1:17
+ * @author nozdormu
+ * @date 2019-07-24-晚上22:53
  */
 public class PuddingGenerator {
 
-    public static void doGeneration(GenerateParams generateParams) {
+    public static void doGeneration(GenerateConfig generateParams) {
 
         AutoGenerator mpg = new AutoGenerator();
 
@@ -46,6 +46,7 @@ public class PuddingGenerator {
         gc.setBaseResultMap(true);// XML ResultMap
         gc.setBaseColumnList(true);// XML columList
         gc.setEnableCache(false);
+//        gc.setSwagger2(true);//实体生成swagger注解
         gc.setOpen(false);
         gc.setAuthor(generateParams.getAuthor());
 
@@ -82,14 +83,19 @@ public class PuddingGenerator {
         // 需要生成的表
         strategy.setInclude(generateParams.getIncludeTables());
 
-        // 公共字段填充
-        ArrayList<TableFill> tableFills = new ArrayList<>();
-        tableFills.add(new TableFill("CREATE_TIME", FieldFill.INSERT));
-        tableFills.add(new TableFill("UPDATE_TIME", FieldFill.UPDATE));
-        tableFills.add(new TableFill("CREATE_USER", FieldFill.INSERT));
-        tableFills.add(new TableFill("UPDATE_USER", FieldFill.UPDATE));
-        strategy.setTableFillList(tableFills);
-
+//        // 公共字段填充
+//        ArrayList<TableFill> tableFills = new ArrayList<>();
+//        tableFills.add(new TableFill("CREATE_TIME\\", FieldFill.INSERT));
+//        tableFills.add(new TableFill("UPDATE_TIME", FieldFill.UPDATE));
+//        tableFills.add(new TableFill("CREATE_USER", FieldFill.INSERT));
+//        tableFills.add(new TableFill("UPDATE_USER", FieldFill.UPDATE));
+//        strategy.setTableFillList(tableFills);
+        strategy.setSuperEntityClass("com.mohism.pudding.kernel.base.entity.BaseEntity");
+        strategy.setEntityLombokModel(true);
+        strategy.setRestControllerStyle(true);
+//        strategy.setEntityTableFieldAnnotationEnable(true);
+        strategy.setSuperEntityColumns("id");
+        strategy.setControllerMappingHyphenStyle(true);
         mpg.setStrategy(strategy);
 
         // 自定义模板配置，可以 copy 源码 mybatis-plus/src/main/resources/templates 下面内容修改，
@@ -137,7 +143,7 @@ public class PuddingGenerator {
     }
 
     public static void main(String[] args) {
-        PuddingGenerator.doGeneration(new GenerateParams());
+        PuddingGenerator.doGeneration(new GenerateConfig());
     }
 
 }
