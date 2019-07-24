@@ -16,7 +16,7 @@
 package com.mohism.pudding.kernel.scanner.modular;
 
 import cn.hutool.core.exceptions.UtilException;
-import cn.hutool.core.util.NetUtil;
+import cn.hutool.core.net.NetUtil;
 import cn.hutool.core.util.StrUtil;
 
 import com.mohism.pudding.kernel.model.resource.ResourceDefinition;
