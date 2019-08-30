@@ -33,7 +33,33 @@ import java.util.ArrayList;
  * @date 2019-07-24-晚上22:53
  */
 public class PuddingGenerator {
+    // 创建业务模块基本结构文件
+    public static void doCreateBaseBmFiles(){
+        /**
+         * 创建业务接口服务模块结构
+         * 例子: com.mohism.pudding.base.route
+         *                 --api
+         *                 --dto
+         *                 --entity
+         *                 --vo
+         */
+        /**
+         * 创建业务层实现服务模块结构
+         * 例子:com.mohism.pudding.base.route.server
+         *                 --conifg
+         *                 --coure
+         *                   --db
+         *                 --modular
+         *                   --controller
+         *                   --mapper
+         *                   --mapping
+         *                   --provider
+         *                   --server
+         *                     --
+         *
+         */
 
+    }
     public static void doGeneration(GenerateConfig generateParams) {
 
         AutoGenerator mpg = new AutoGenerator();
@@ -143,7 +169,9 @@ public class PuddingGenerator {
     }
 
     public static void main(String[] args) {
+
         PuddingGenerator.doGeneration(new GenerateConfig());
+
     }
 
 }

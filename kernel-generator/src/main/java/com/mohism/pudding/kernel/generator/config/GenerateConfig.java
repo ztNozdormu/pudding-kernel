@@ -36,7 +36,7 @@ public class GenerateConfig {
     private String jdbcDriver = "com.mysql.cj.jdbc.Driver";//com.mysql.jdbc.Driver
 
     //数据库连接地址
-    private String jdbcUrl = "jdbc:mysql://127.0.0.1:3306/pudding_system?autoReconnect=true&useUnicode=true&characterEncoding=utf8&zeroDateTimeBehavior=convertToNull&useSSL=false&serverTimezone=UTC";
+    private String jdbcUrl = "jdbc:mysql://127.0.0.1:3306/vblog?autoReconnect=true&useUnicode=true&characterEncoding=utf8&zeroDateTimeBehavior=convertToNull&useSSL=false&serverTimezone=UTC";
 
     //数据库账号
     private String jdbcUserName = "root";
@@ -45,10 +45,10 @@ public class GenerateConfig {
     private String jdbcPassword = "root";
 
     //去掉表的前缀
-    private String[] removeTablePrefix = {"sys_"};
+    private String[] removeTablePrefix = {"vblog_"};
 
     //代码生成包含的表，可为空，为空默认生成所有
-    private String[] includeTables={"sys_user","sys_depart","sys_role","sys_permission"};
+    private String[] includeTables={"vblog_article","vblog_article_tag","vblog_category","vblog_comment","vblog_tag"};
 
     //代码生成的类的父包名称
     private String parentPackage = "com.mohism.pudding.xxx.modular";
