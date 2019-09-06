@@ -22,9 +22,13 @@ import com.baomidou.mybatisplus.generator.config.*;
 import com.baomidou.mybatisplus.generator.config.po.TableFill;
 import com.baomidou.mybatisplus.generator.config.rules.NamingStrategy;
 import com.mohism.pudding.kernel.generator.config.GenerateConfig;
+import com.mohism.pudding.kernel.generator.config.GenerateModularFileConfig;
 import com.mohism.pudding.kernel.generator.engine.BeetlTemplateEngine;
+import com.mohism.pudding.kernel.generator.enums.ModularEnum;
+import com.mohism.pudding.kernel.model.util.CreateFileUtil;
 
 import java.util.ArrayList;
+import java.util.List;
 
 /**
  * 代码生成执行器
@@ -170,7 +174,47 @@ public class PuddingGenerator {
 
     public static void main(String[] args) {
 
-        PuddingGenerator.doGeneration(new GenerateConfig());
+//        PuddingGenerator.doGeneration(new GenerateConfig());
+        // 项目功能模块基本文件夹目录生成
+        GenerateModularFileConfig gmfc = new GenerateModularFileConfig();
+            gmfc.setBaseModularFile("com.mohism.pudding");
+            gmfc.setBusinessModularFile("cms");
+            gmfc.setFunctionModularFile("pblog");
+            gmfc.setModularType("interface");
+            StringBuilder sbBase = new StringBuilder();
+            sbBase.append(gmfc.getBaseModularFile());
+            sbBase.append(".");
+            sbBase.append(gmfc.getBusinessModularFile());
+            sbBase.append(".");
+            sbBase.append(gmfc.getFunctionModularFile());
+             List<String> sbInterfaces = new ArrayList<String>();
+             List<String> sbServices = new ArrayList<String>();
+             // 接口层OR业务服务层
+        String ss = ModularEnum.getDirsBymodularType(gmfc.getModularType());
+             String[] childrenDirs = ss.split(",");
+             for(String childrenDir:childrenDirs){
+                 if("interface".equals(gmfc.getModularType())){
+                     String sbInterface=sbBase.toString();
+                     sbInterface+="."+childrenDir;
+                     sbInterfaces.add(sbInterface);
+                 }
+//                 if("server".equals(gmfc.getModularType())){
+//                     StringBuilder sbService = new StringBuilder();
+//                     sbService=sbBase;
+//                     sbService.append("server");
+//                     sbService.append(".");
+//                     sbService.append(childrenDir);
+//                     sbServices.add(sbService);
+//                 }
+             }
+         System.out.println(sbInterfaces);
+         System.out.println(sbServices);
+            sbInterfaces.stream().forEach(
+                    sbInterface->{
+                        sbInterface = sbInterface.replace(".","/");
+                        CreateFileUtil.createDir(sbInterface);
+                    }
+            );
 
     }
 
